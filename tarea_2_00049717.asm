@@ -22,15 +22,17 @@
         mov [202h], cl
         mov     cl, "r"
         mov [203h], cl
-        
-        mov     cl, ""
-        mov [204h], cl
+
+        mov     cl, "e"
+        mov [210h], cl
+        mov     cl, "s"
+        mov [211h], cl
         
         mov     cl, "n"
-        mov [205h], cl
+        mov [220h], cl
         mov     cl, "a"     
-        mov [206h], cl
+        mov [221h], cl
         mov     cl, "d"
-        mov [207h], cl
+        mov [222h], cl
         mov     cl, "a"
-        mov [208h], cl
+        mov [223h], cl
