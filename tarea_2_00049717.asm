@@ -1,8 +1,8 @@
   
                 org     100h
 
-                        ;EJERCICIO 1
-                        ;carné 00049717 -> 4+9+7+1+7 = 28/5 = 5.6 = 6
+                ;EJERCICIO 1
+                ;carné 00049717 -> 4+9+7+1+7 = 28/5 = 5.6 = 6
                         
 
                 mov     ax, 0000h
@@ -44,7 +44,7 @@
                 mov     cl, "a"
                 mov [20Bh], cl
 
-        ;EJERCICIO 2
+                ;EJERCICIO 2
 
                 mov     ax, 0000h
                 mov     al, 2d
@@ -62,3 +62,25 @@ sig:            cmp     bx, 21Fh
                 jb      estimacion
 
                 int 10h
+
+                ;EJERCICIO 3 
+
+               mov     ax, 0000h
+               mov     ax, 0d
+               mov     [220h], ax  ; F0 = 0
+               mov     ax, 1d
+               mov     [221h], ax  ; F1 = 1
+               mov     bx, 222h
+fibo:          mov     ax, 0000h
+               mov     [bx], ax
+               sub     bx, 2h
+               mov     al, [bx]
+               add     bx, 1h
+               add     ax, [bx]
+               add     bx, 1h
+               mov     [bx], ax
+               add     bx, 1h
+               cmp     bx, 22Fh
+               jb      fibo
+
+               int 20h 
