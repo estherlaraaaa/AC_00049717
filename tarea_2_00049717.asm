@@ -1,9 +1,9 @@
   
         org     100h
 
-        ;Ejercicio 1
+        ;EJERCICIO 1
         ;carné 00049717 -> 4+9+7+1+7 = 28/5 = 5.6 = 6
-        ;peor es nada
+        
 
         mov     ax, 0000h
         add     ax, 4d
@@ -14,6 +14,8 @@
         mov     cl, 5d
         div     cl
 
+        ;R(6)// peor es nada
+
         mov     cl, "P"
         mov [200h], cl
         mov     cl, "e"
@@ -23,16 +25,25 @@
         mov     cl, "r"
         mov [203h], cl
 
+        mov     cl, ""
+        mov [204h], cl
+
         mov     cl, "e"
-        mov [210h], cl
+        mov [205h], cl
         mov     cl, "s"
-        mov [211h], cl
+        mov [206h], cl
+
+        mov     cl, ""
+        mov [207h], cl
         
         mov     cl, "n"
-        mov [220h], cl
+        mov [208h], cl
         mov     cl, "a"     
-        mov [221h], cl
+        mov [209h], cl
         mov     cl, "d"
-        mov [222h], cl
+        mov [20Ah], cl
         mov     cl, "a"
-        mov [223h], cl
+        mov [20Bh], cl
+
+
+        int 10h
