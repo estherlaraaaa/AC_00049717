@@ -61,18 +61,16 @@ uno:            add     bx, 1h
 sig:            cmp     bx, 21Fh
                 jb      estimacion
 
-                int 10h
 
                 ;EJERCICIO 3 
 
-               ;Ejercicio 3
                  mov     ax, 0000h
                  mov     ax, 0d
                  mov     [220h], ax  ; F0 = 0
                  mov     ax, 1d
                  mov     [221h], ax  ; F1 = 1
                  mov     bx, 222h
-fibo:            mov     ax, 0000h
+fibonacci:            mov     ax, 0000h
                  mov     [bx], ax
                  sub     bx, 2h
                  mov     al, [bx]
@@ -82,7 +80,7 @@ fibo:            mov     ax, 0000h
                  mov     [bx], ax
                  add     bx, 1h
                  cmp     bx, 22Fh
-                 jb      fibo
+                 jb      fibonacci
 
         int 20h
 
